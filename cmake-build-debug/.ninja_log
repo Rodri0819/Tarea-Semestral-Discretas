@@ -1,0 +1,8 @@
+# ninja log v6
+1	15	1728598031302899064	CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/lectura_matriz_adyacente.c.o	6814664bd751ac05
+0	13	1728598478610579808	build.ninja	6066a342061255e3
+0	18	1728597881378425741	CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/main.c.o	487cbbd5bd07962d
+15	27	1728598031314898981	Proyecto_Matematicas_Discretas	61073caeb9c524af
+0	17	1728598505558691421	CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/main.c.o	bfe31a852a9e63fd
+0	19	1728598505558691421	CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/lectura_matriz_adyacente.c.o	7f071b314ebbd535
+19	35	1728598505578691508	Proyecto_Matematicas_Discretas	61073caeb9c524af

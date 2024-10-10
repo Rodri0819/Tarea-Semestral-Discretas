@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Proyecto_Matematicas_Discretas",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Proyecto_Matematicas_Discretas::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Proyecto_Matematicas_Discretas-Debug-b4ec2ba7c475e648c910.json",
+					"name" : "Proyecto_Matematicas_Discretas",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/rodrigo/Documents/Proyecto_Matematicas_Discretas/Tarea-Semestral-Discretas/cmake-build-debug",
+		"source" : "/home/rodrigo/Documents/Proyecto_Matematicas_Discretas/Tarea-Semestral-Discretas"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
