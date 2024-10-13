@@ -6,4 +6,5 @@
 #define ANALISIS_H
 int gradomaximodesalida();
 int gradomaximodeentrada();
+void transponermatriz();
 #endif //ANALISIS_H

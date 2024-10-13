@@ -23,6 +23,8 @@ int main() {
 
     lectura_archivo("../grafo");
 
+    imprimir_matriz();
+
     while (continuar) {
 
         printf("Ingresa una operación:\n");
@@ -39,8 +41,8 @@ int main() {
             case 1:
                 int s= gradomaximodesalida();
                 int e = gradomaximodeentrada();
-                printf("Grado máximo de entrada es %i\n", e);
                 printf("Grado máximo de salida es %i\n", s);
+                printf("Grado máximo de entrada es %i\n", e);
                 printf("El grado máximo es %i\n", e+s);
                 break;
             case 2:
