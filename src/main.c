@@ -27,10 +27,10 @@ int main() {
     while (continuar) {
 
         printf("Ingresa una operación:\n");
-        printf("1. Revisar grado máximo\n");
-        printf("n. Salir\n");
+        printf("1. Revisar grados\n");
+        printf("2. Salir\n");
 
-        printf("Seleccione una opción: ");
+        printf("Seleccione una opción:");
         scanf("%d", &opcion);
 
         if (!isdigit(opcion)) {
@@ -38,21 +38,24 @@ int main() {
         }
         switch (opcion) {
             case 1:
-                int s= gradomaximodesalida();
+                int s = gradomaximodesalida();
                 int e = gradomaximodeentrada();
+                int min = gradoMin();
+                int max = gradoMax();
                 printf("Grado máximo de salida es %i\n", s);
                 printf("Grado máximo de entrada es %i\n", e);
                 printf("El grado máximo es %i\n", e+s);
-                break;
-            case 2:
+                printf("El grado máximo del grafo es %i\n", max);
+                printf("El grado mínimo del grado es %i\n", min);
             break;
-            case 3:
+
+            case 2:
                 printf("ADio\n");
                 continuar = 0;
             break;
 
             default:
-
+                    printf("eso tilin");
                     printf("Invalido.\n");
         }
     }

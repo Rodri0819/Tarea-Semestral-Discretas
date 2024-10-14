@@ -39,7 +39,7 @@ void lectura_archivo(const char *file) {
         continue;
         }
         //Leer los vertices adyacentes
-        while (fscanf(f, "%d"   , &adyacente)==1) {
+        while (fscanf(f, "%d" , &adyacente)==1) {
             //Marcar la conexion en la matriz, dandole valor 1
             matrix_adyacente[vertice - 1][adyacente - 1] = 1;
 
