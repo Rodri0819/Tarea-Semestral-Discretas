@@ -9,7 +9,6 @@ int main() {
     char filename[100];
     int vertices;
     int continuar = 1;
-    int continuar2 = 1;
     int opcion;
     /*
     printf("Ingrese la ubicación del archivo\n");
@@ -57,7 +56,5 @@ int main() {
                     printf("Invalido.\n");
         }
     }
-
-
     return 0;
 }
