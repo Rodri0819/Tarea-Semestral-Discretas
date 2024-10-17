@@ -4,7 +4,8 @@
 
 #ifndef ANALISIS_H
 #define ANALISIS_H
-int gradomaximodesalida();
-int gradomaximodeentrada();
-void transponermatriz();
+int gradoMax();
+int gradoMin();
+int *aislados();
+int conexidad();
 #endif //ANALISIS_H

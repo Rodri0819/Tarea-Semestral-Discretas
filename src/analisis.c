@@ -1,22 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>  // Para malloc y free
 #include "analisis.h"
-#include "lectura.h"  // Para usar la matriz de adyacencia global
+#include "lectura.h"
 
 int gradoMin() {
     int gradoMin = vertices;
-    int vertice;
-    int fila = vertices;
-    int columna = vertices;
-
-    for (int i=0; i<vertices; i++){
-        int counter=0;
-        for (int j=0; j<vertices; j++){
-            if (matrix_adyacente[i][j]==1){
+    for (int i = 0; i < vertices; i++) {
+        int counter = 0;
+        for (int j = 0; j < vertices; j++) {
+            if (matriz_adyacente[i][j] == 1) {
                 counter++;
             }
         }
-        if (counter<gradoMin){
-            gradoMin=counter;
+        if (counter < gradoMin) {
+            gradoMin = counter;
         }
     }
     return gradoMin;
@@ -24,81 +21,121 @@ int gradoMin() {
 
 int gradoMax() {
     int gradoMax = 0;
-    int vertice;
-    int fila = vertices;
-    int columna = vertices;
-
-    for (int i=0; i<vertices; i++){
-        int counter=0;
-        for (int j=0; j<vertices; j++){
-            if (matrix_adyacente[i][j]==1){
+    for (int i = 0; i < vertices; i++) {
+        int counter = 0;
+        for (int j = 0; j < vertices; j++) {
+            if (matriz_adyacente[i][j] == 1) {
                 counter++;
             }
         }
-        if (counter>gradoMax){
-            gradoMax=counter;
+        if (counter > gradoMax) {
+            gradoMax = counter;
         }
     }
     return gradoMax;
 }
 
-int gradomaximodesalida() {
-    int max_grado = 0;
-    int vertice;
-    int fila = vertices;
-    int columna = vertices;
+int* aislados(int* contador) {
+    int* filasconceros = (int*) malloc(vertices * sizeof(int));
+    int contador_filasconceros = 0;
 
-    for (int i = 0; i < fila; i++) {
-        int grado_actual = 0;
-        for (int j = 0; j < columna; j++) {
-            if (matrix_adyacente[i][j] == 1) {
-                grado_actual++;
+    for (int i = 0; i < vertices; ++i) {
+        int ceros = 0;
+        for (int j = 0; j < vertices; ++j) {
+            if (matriz_adyacente[i][j] == 0) {
+                ceros++;
             }
         }
-        if (grado_actual > max_grado) {
-            max_grado = grado_actual;
-            vertice = i;
+        if (ceros == vertices) {
+            filasconceros[contador_filasconceros] = i;
+            contador_filasconceros++;
         }
     }
-    return max_grado;
+
+    *contador = contador_filasconceros;
+    return filasconceros;
 }
 
-void transponermatriz() {
-    int fila = vertices;
-    int columna = vertices;
-    int matrix_transpuesta[100][100];
-
-    for (int i = 0; i < fila; i++) {
-        for (int j = 0; j < columna; j++) {
-            matrix_transpuesta[j][i] = matrix_adyacente[i][j];
-        }
-    }
-
-    for (int i = 0; i < fila; i++) {
-        for (int j = 0; j < columna; j++) {
-            matrix_adyacente[i][j] = matrix_transpuesta[i][j];
+//Función que recibe  tres matrices por punteros, multiplicando A * B y la guarda en resultado
+void multiplicarMatrices(int** resultado, int** A, int** B) {
+    for (int i = 0; i < vertices; ++i) {
+        for (int j = 0; j < vertices; ++j) {
+            resultado[i][j] = 0;
+            //La multiplicación de la matriz se guarda en resultado
+            for (int k = 0; k < vertices; ++k) {
+                resultado[i][j] = resultado[i][j] +  (A[i][k] * B[k][j]);
+            }
         }
     }
 }
 
-int gradomaximodeentrada() {
-    int max_grado = 0;
-    int vertice;
-    transponermatriz();
-    int fila = vertices;
-    int columna = vertices;
-
-    for (int i = 0; i < fila; i++) {
-        int grado_actual = 0;
-        for (int j = 0; j < columna; j++) {
-            if (matrix_adyacente[i][j] == 1) {
-                grado_actual++;
-            }
-        }
-        if (grado_actual > max_grado) {
-            max_grado = grado_actual;
-            vertice = i;
+//Suma las matrices
+void sumarMatrices(int** resultado, int** A) {
+    for (int i = 0; i < vertices; ++i) {
+        for (int j = 0; j < vertices; ++j) {
+            resultado[i][j] = resultado[i][j] + A[i][j];
         }
     }
-    return max_grado;
+}
+
+int conexidad() {
+    //Asignación de memoria dinamica para las matrices
+    int** matriz_suma = (int**) malloc(vertices * sizeof(int*));
+    int** matriz_potencia = (int**) malloc(vertices * sizeof(int*));
+    int** matriz_temp = (int**) malloc(vertices * sizeof(int*));
+
+    for (int i = 0; i < vertices; i++) {
+        matriz_suma[i] = (int*) malloc(vertices * sizeof(int));
+        matriz_potencia[i] = (int*) malloc(vertices * sizeof(int));
+        matriz_temp[i] = (int*) malloc(vertices * sizeof(int));
+
+        //Inicializamos la matriz suma en 0 y la potencia como la matriz adyacente
+        for (int j = 0; j < vertices; j++) {
+            matriz_suma[i][j] = 0;
+            matriz_potencia[i][j] = matriz_adyacente[i][j];
+        }
+    }
+
+    for (int k = 1; k < vertices; ++k) {
+        //Multiplicamos la matriz potencia por la matriz adyacente la cantidad de vertices
+        multiplicarMatrices(matriz_temp, matriz_potencia, matriz_adyacente);
+
+        //Copiamos el resultado de la multiplicacion en la matriz potencia, asi iterando el resultado
+        for (int i = 0; i < vertices; i++) {
+            for (int j = 0; j < vertices; j++) {
+                matriz_potencia[i][j] = matriz_temp[i][j];
+            }
+            //Sumamos la matriz potencia la cantidad de vertices y la guardamos finalmente en la matriz suma
+            sumarMatrices(matriz_suma, matriz_potencia);
+        }
+    }
+
+    int conexo = 1;
+    for (int i = 0; i < vertices; i++) {
+        for (int j = 0; j < vertices; j++) {
+            //Si encontramos un 0 en la matriz, es disconexo
+            if (matriz_suma[i][j] == 0) {
+                conexo = 0;
+                break;
+            }
+        }
+    }
+    for (int i = 0; i < vertices; ++i) {
+        for (int j = 0; j < vertices; ++j) {
+            printf("%d",matriz_suma[i][j]);
+            printf(",");
+        }
+        printf("\n");
+    }
+    //Liberación de la memoria
+    for (int i = 0; i < vertices; i++) {
+        free(matriz_suma[i]);
+        free(matriz_potencia[i]);
+        free(matriz_temp[i]);
+    }
+    free(matriz_suma);
+    free(matriz_potencia);
+    free(matriz_temp);
+
+    return conexo;  
 }

@@ -1,7 +1,7 @@
 #ifndef LECTURA_MATRIZ_ADYACENTE_H
 #define LECTURA_MATRIZ_ADYACENTE_H
 extern int vertices;
-extern int **matrix_adyacente;
+extern int **matriz_adyacente;
 
 // Declaración de la función que implementará la lógica para leer el archivo
 void lectura_archivo();
