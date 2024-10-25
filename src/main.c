@@ -17,9 +17,11 @@ int main() {
     while (continuar) {
         printf("Ingresa una operación:\n");
         printf("1. Revisar grados\n");
-        printf("2. Revisar conexidad \n");
+        printf("2. Revisar conexidad (Matriz) \n");
         //printf("3. Revisar si posee vértices aislados\n");
-        printf("4. Salir\n");
+        printf("4. Revisar conexidad\n");
+        printf("5. Revisar K-conexidad\n");
+        printf("6. Salir\n");
 
         printf("Seleccione una opción: ");
         scanf("%d", &opcion);
@@ -44,6 +46,7 @@ int main() {
                     printf("El grafo es disconexo.\n");
                 }
                 continuar = 0;
+                liberar_matriz();
                 break;
             }
 
@@ -65,11 +68,13 @@ int main() {
                     free(filasconceros);
                 }
                 continuar = 0;
+                liberar_matriz();
                 break;
             }
 
-            case 4:
+            case 6:
                 continuar = 0;
+                liberar_matriz();
                 break;
 
             default:

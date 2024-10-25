@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20"
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Proyecto_Matematicas_Discretas::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Proyecto_Matematicas_Discretas-Debug-4b3754bdd0d91053faee.json",
+					"jsonFile" : "target-Proyecto_Matematicas_Discretas-Debug-581b4f311cb95af762f5.json",
 					"name" : "Proyecto_Matematicas_Discretas",
 					"projectIndex" : 0
 				}
@@ -49,12 +49,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug",
-		"source" : "C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas"
+		"build" : "/home/rodrigo/Desktop/MIo/Tarea-Semestral-Discretas/cmake-build-debug",
+		"source" : "/home/rodrigo/Desktop/MIo/Tarea-Semestral-Discretas"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 7
 	}
 }

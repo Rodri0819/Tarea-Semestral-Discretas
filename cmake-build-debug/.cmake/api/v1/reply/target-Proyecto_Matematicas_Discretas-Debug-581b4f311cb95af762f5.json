@@ -2,10 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Proyecto_Matematicas_Discretas.exe"
-		},
-		{
-			"path" : "Proyecto_Matematicas_Discretas.pdb"
+			"path" : "Proyecto_Matematicas_Discretas"
 		}
 	],
 	"backtrace" : 1,
@@ -70,16 +67,12 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
-			},
-			{
-				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
-				"role" : "libraries"
 			}
 		],
 		"language" : "C"
 	},
 	"name" : "Proyecto_Matematicas_Discretas",
-	"nameOnDisk" : "Proyecto_Matematicas_Discretas.exe",
+	"nameOnDisk" : "Proyecto_Matematicas_Discretas",
 	"paths" : 
 	{
 		"build" : ".",

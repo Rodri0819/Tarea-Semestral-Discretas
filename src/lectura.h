@@ -7,4 +7,5 @@ extern int **matriz_adyacente;
 void lectura_archivo();
 void inicializar_matriz();
 void imprimir_matriz();
+void liberar_matriz();
 #endif

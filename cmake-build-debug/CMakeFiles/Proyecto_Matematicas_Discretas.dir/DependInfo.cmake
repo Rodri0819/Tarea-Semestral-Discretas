@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/src/analisis.c" "CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/analisis.c.obj" "gcc" "CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/analisis.c.obj.d"
-  "C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/src/lectura.c" "CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/lectura.c.obj" "gcc" "CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/lectura.c.obj.d"
-  "C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/src/main.c" "CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/main.c.obj" "gcc" "CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/main.c.obj.d"
+  "/home/rodrigo/Desktop/MIo/Tarea-Semestral-Discretas/src/analisis.c" "CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/analisis.c.o" "gcc" "CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/analisis.c.o.d"
+  "/home/rodrigo/Desktop/MIo/Tarea-Semestral-Discretas/src/lectura.c" "CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/lectura.c.o" "gcc" "CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/lectura.c.o.d"
+  "/home/rodrigo/Desktop/MIo/Tarea-Semestral-Discretas/src/main.c" "CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/main.c.o" "gcc" "CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/main.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
