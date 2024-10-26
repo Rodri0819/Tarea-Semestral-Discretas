@@ -57,6 +57,7 @@ CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/analisis.c.o: /home/rodrigo/De
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h
 
 CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/lectura.c.o: /home/rodrigo/Desktop/MIo/Tarea-Semestral-Discretas/src/lectura.c \

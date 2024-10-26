@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>  // Para malloc y free
 #include "analisis.h"
+
+#include <stdbool.h>
+
 #include "lectura.h"
 
 int gradoMin() {
@@ -137,5 +140,41 @@ int conexidad() {
     free(matriz_potencia);
     free(matriz_temp);
 
-    return conexo;  
+    return conexo;
 }
+bool* nodoVisitado;  // Array para marcar los nodos visitados
+
+// Función para inicializar el array de nodos visitados
+void inicializarVisitados() {
+    nodoVisitado = (bool*)malloc(vertices * sizeof(bool));
+    for (int i = 0; i < vertices; i++) {
+        nodoVisitado[i] = false;
+    }
+}
+//Marca los nodos alcansables desde s
+void dfs(int s) {
+    nodoVisitado[s] = true;
+    for (int i = 0; i < vertices; i++) {
+        //Si hay conexión y el nodo no está visitado
+        if (matriz_adyacente[s][i] == 1 && !nodoVisitado[i]) {
+            dfs(i); //Se llama recursivamente
+        }
+    }
+}
+
+int dfsconexo() {
+    inicializarVisitados();  // Inicializa el array de visitados
+    dfs(0);                  // Realiza DFS desde el primer nodo (0)
+
+    // Verifica si todos los nodos fueron visitados
+    for (int i = 0; i < vertices; i++) {
+        if (!nodoVisitado[i]) {
+            free(nodoVisitado);  // Libera memoria antes de retornar
+            return 0;  // Retorna 0 si el grafo es disconexo
+        }
+    }
+
+    free(nodoVisitado);  // Libera memoria después de verificar
+    return 1;  // Retorna 1 si el grafo es conexo
+}
+
