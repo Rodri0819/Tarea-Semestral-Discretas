@@ -2,10 +2,35 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <string.h>
+
 #include "lectura.h"
 #include "analisis.h"
 
 extern int vertices;
+char filename[100];  // Tamaño fijo para almacenar el nombre del archivo
+
+void seguir(int *continuar) {
+    int opcion2;
+    int seguir = 1;
+
+    while (seguir) {
+        printf("Desea realizar otra operación?\n");
+        printf("1. Sí\n");
+        printf("2. No\n");
+        scanf("%d", &opcion2);
+
+        if (opcion2 == 1) {
+            seguir = 0;
+        } else if (opcion2 == 2) {
+            liberar_matriz();
+            *continuar = 0;
+            seguir = 0;
+        } else {
+            printf("Opción no válida. Intente de nuevo.\n");
+        }
+    }
+}
 
 int main() {
     int continuar = 1;
@@ -21,8 +46,17 @@ int main() {
     lectura_archivo(filename);
     */
 
-
+    // Primera lectura de archivo
     lectura_archivo("../grafo");
+
+    imprimir_matriz();
+    // Verificar simetría para asegurarnos que sea un grafo
+    if (revisarsimetria()) {
+        printf("Grafo confirmado!\n");
+    } else {
+        printf("Lo ingresado no es un grafo!\n");
+        continuar = 0;
+    }
 
     while (continuar) {
         printf("Ingresa una operación:\n");
@@ -31,7 +65,8 @@ int main() {
         printf("3. Revisar conexidad (DFS)\n");
         printf("4. Revisar K-conexidad\n");
         printf("5. Revisar si posee vértices aislados\n");
-        printf("6. Salir\n");
+        printf("6. Introducir otro archivo(grafo)\n");
+        printf("7. Salir\n");
 
         printf("Seleccione una opción: ");
         scanf("%d", &opcion);
@@ -40,23 +75,25 @@ int main() {
             case 1: {
                 int min = gradoMin();
                 int max = gradoMax();
+                printf("--------------------------------------\n");
                 printf("El grado máximo del grafo es %i\n", max);
                 printf("El grado mínimo del grafo es %i\n", min);
-                liberar_matriz();
-                continuar = 0;
+                printf("--------------------------------------\n");
+                seguir(&continuar);
                 break;
             }
             case 2: {
+                printf("--------------------------------------\n");
                 if (conexidad()) {
                     printf("El grafo es conexo.\n");
                 } else {
                     printf("El grafo es disconexo.\n");
                 }
-                liberar_matriz();
-                continuar = 0;
+                printf("--------------------------------------\n");
+
+                seguir(&continuar);
                 break;
             }
-
             case 3: {
                 for (int i = 0; i < vertices; i++) {
                     printf("\n");
@@ -65,27 +102,26 @@ int main() {
                     }
                 }
                 printf("\n");
-
+                printf("--------------------------------------\n");
                 if (dfsconexo(matriz_adyacente)) {
                     printf("El grafo es conexo.\n");
                 } else {
                     printf("El grafo es disconexo.\n");
                 }
-                liberar_matriz();
-                continuar = 0;
+                printf("--------------------------------------\n");
+
+                seguir(&continuar);
                 break;
             }
-
             case 4: {
                 printf("Función de K-conexidad aún no implementada.\n");
-                liberar_matriz();
-                continuar = 0;
+                seguir(&continuar);
                 break;
             }
             case 5: {
                 int contador;
                 int *filasconceros = aislados(&contador);
-
+                printf("--------------------------------------\n");
                 if (filasconceros == NULL) {
                     printf("Error al revisar la conexidad.\n");
                 } else {
@@ -99,11 +135,32 @@ int main() {
                     }
                     free(filasconceros);
                 }
-                liberar_matriz();
-                continuar = 0;
+                printf("--------------------------------------\n");
+                seguir(&continuar);
                 break;
             }
             case 6:
+                printf("Ingrese la ubicación del archivo\n");
+                getchar();  //Limpia el buffer de entrada antes de fgets
+                fgets(filename, sizeof(filename), stdin);
+                filename[strcspn(filename, "\n")] = '\0';
+                liberar_matriz(); // Liberar matriz antes de cargar un nuevo archivo
+
+                lectura_archivo(filename);
+
+                imprimir_matriz();
+                //Verificar simetría para asegurarnos que sea un grafo
+                if (revisarsimetria()) {
+                    printf("Grafo confirmado!\n");
+                } else {
+                    printf("Lo ingresado no es un grafo!\n");
+                    continuar = 0;
+                }
+                if (continuar) {
+                seguir(&continuar);  // Solo pide otra operación si `continuar` no se ha puesto en 0
+                }
+                break;
+            case 7:
                 continuar = 0;
                 liberar_matriz();
                 break;

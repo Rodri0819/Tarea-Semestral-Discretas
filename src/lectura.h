@@ -8,4 +8,5 @@ void lectura_archivo();
 void inicializar_matriz();
 void imprimir_matriz();
 void liberar_matriz();
+int revisarsimetria();
 #endif
