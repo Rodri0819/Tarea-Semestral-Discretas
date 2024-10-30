@@ -1,14 +1,22 @@
 //
 // Created by rodrigo on 10/12/24.
 //
-extern int *visitado;
-extern int *padre;
+
 #ifndef ANALISIS_H
 #define ANALISIS_H
+
+extern int vertices;
+extern int **matriz_adyacente;
+extern int **matriz_temporal;
+extern int *visitado;
+extern int *padre;
+
 int gradoMax();
 int gradoMin();
-int *aislados();
-int conexidad();
-void dfs();
+int *aislados(int *contador);
+int conexidad(int **matriz_adyacente);
 int dfsconexo();
-#endif //ANALISIS_H
+int kConectividad();
+
+
+#endif // ANALISIS_H

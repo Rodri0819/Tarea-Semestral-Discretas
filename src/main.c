@@ -8,7 +8,7 @@
 #include "analisis.h"
 
 extern int vertices;
-char filename[100];  // Tamaño fijo para almacenar el nombre del archivo
+char filename[100];
 
 void seguir(int *continuar) {
     int opcion2;
@@ -58,6 +58,7 @@ int main() {
         continuar = 0;
     }
 
+    imprimir_matriz();
     while (continuar) {
         printf("Ingresa una operación:\n");
         printf("1. Revisar grados\n");
@@ -84,7 +85,7 @@ int main() {
             }
             case 2: {
                 printf("--------------------------------------\n");
-                if (conexidad()) {
+                if (conexidad(matriz_adyacente)) {
                     printf("El grafo es conexo.\n");
                 } else {
                     printf("El grafo es disconexo.\n");
@@ -95,12 +96,15 @@ int main() {
                 break;
             }
             case 3: {
+                printf("--------------------------------------\n");
                 for (int i = 0; i < vertices; i++) {
                     printf("\n");
                     for (int j = 0; j < vertices; j++) {
                         printf("%i", matriz_adyacente[i][j]);
                     }
                 }
+                printf("--------------------------------------\n");
+
                 printf("\n");
                 printf("--------------------------------------\n");
                 if (dfsconexo(matriz_adyacente)) {
@@ -114,7 +118,10 @@ int main() {
                 break;
             }
             case 4: {
-                printf("Función de K-conexidad aún no implementada.\n");
+
+                int k = kConectividad();
+                printf("La k-conectividad del grafo es: %d\n", k);
+
                 seguir(&continuar);
                 break;
             }
@@ -141,7 +148,7 @@ int main() {
             }
             case 6:
                 printf("Ingrese la ubicación del archivo\n");
-                getchar();  //Limpia el buffer de entrada antes de fgets
+                getchar();  // Limpia el buffer de entrada antes de fgets
                 fgets(filename, sizeof(filename), stdin);
                 filename[strcspn(filename, "\n")] = '\0';
                 liberar_matriz(); // Liberar matriz antes de cargar un nuevo archivo
@@ -149,7 +156,7 @@ int main() {
                 lectura_archivo(filename);
 
                 imprimir_matriz();
-                //Verificar simetría para asegurarnos que sea un grafo
+                // Verificar simetría para asegurarnos que sea un grafo
                 if (revisarsimetria()) {
                     printf("Grafo confirmado!\n");
                 } else {
@@ -157,7 +164,7 @@ int main() {
                     continuar = 0;
                 }
                 if (continuar) {
-                seguir(&continuar);  // Solo pide otra operación si `continuar` no se ha puesto en 0
+                    seguir(&continuar);
                 }
                 break;
             case 7:

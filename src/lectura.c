@@ -6,17 +6,21 @@
 int vertices;
 int **matriz_adyacente;
 int **matriz_transpuesta;
+int **matriz_temporal;
 
 void inicializarmatriz() {
     matriz_adyacente = (int **)malloc(vertices * sizeof(int *));
     matriz_transpuesta = (int **)malloc(vertices * sizeof(int *));
+    matriz_temporal = (int **) malloc(vertices* sizeof (int *));
 
     for (int i = 0; i < vertices; i++) {
         matriz_adyacente[i] = (int *)malloc(vertices * sizeof(int));
         matriz_transpuesta[i] = (int *)malloc(vertices * sizeof(int));
+        matriz_temporal[i] = (int *)malloc(vertices * sizeof(int));
         for (int j = 0; j < vertices; j++) {
             matriz_adyacente[i][j] = 0;
             matriz_transpuesta[i][j] = 0;
+            matriz_temporal[i][j] = 0;
         }
     }
 }

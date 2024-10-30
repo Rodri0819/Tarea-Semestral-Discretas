@@ -1,1 +1,3 @@
-/usr/bin/cc -g CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/main.c.o CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/lectura.c.o CMakeFiles/Proyecto_Matematicas_Discretas.dir/src/analisis.c.o -o Proyecto_Matematicas_Discretas
+"C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\Proyecto_Matematicas_Discretas.dir/objects.a
+"C:\PROGRA~1\JetBrains\CLion 2024.1.1\bin\mingw\bin\ar.exe" qc CMakeFiles\Proyecto_Matematicas_Discretas.dir/objects.a @CMakeFiles\Proyecto_Matematicas_Discretas.dir\objects1.rsp
+"C:\PROGRA~1\JetBrains\CLion 2024.1.1\bin\mingw\bin\gcc.exe" -g -Wl,--whole-archive CMakeFiles\Proyecto_Matematicas_Discretas.dir/objects.a -Wl,--no-whole-archive -o Proyecto_Matematicas_Discretas.exe -Wl,--out-implib,libProyecto_Matematicas_Discretas.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Proyecto_Matematicas_Discretas.dir\linkLibs.rsp

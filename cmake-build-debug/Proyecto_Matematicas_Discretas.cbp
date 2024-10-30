@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug"/>
+				<Option working_dir="C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Proyecto_Matematicas_Discretas">
-				<Option output="C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Proyecto_Matematicas_Discretas.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug"/>
+				<Option output="C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Proyecto_Matematicas_Discretas.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -30,15 +30,15 @@
 					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto_Matematicas_Discretas"/>
-					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto_Matematicas_Discretas"/>
+					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Proyecto_Matematicas_Discretas/fast">
-				<Option output="C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Proyecto_Matematicas_Discretas.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug"/>
+				<Option output="C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Proyecto_Matematicas_Discretas.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -49,49 +49,49 @@
 					<Add directory="C:/Program Files/JetBrains/CLion 2024.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto_Matematicas_Discretas/fast"/>
-					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proyecto_Matematicas_Discretas/fast"/>
+					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug"/>
+				<Option working_dir="C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug"/>
+				<Option working_dir="C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JetBrains/CLion 2024.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/src/analisis.c">
+		<Unit filename="C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/src/analisis.c">
 			<Option target="Proyecto_Matematicas_Discretas"/>
 		</Unit>
-		<Unit filename="C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/src/analisis.h">
+		<Unit filename="C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/src/analisis.h">
 			<Option target="Proyecto_Matematicas_Discretas"/>
 		</Unit>
-		<Unit filename="C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/src/lectura.c">
+		<Unit filename="C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/src/lectura.c">
 			<Option target="Proyecto_Matematicas_Discretas"/>
 		</Unit>
-		<Unit filename="C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/src/lectura.h">
+		<Unit filename="C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/src/lectura.h">
 			<Option target="Proyecto_Matematicas_Discretas"/>
 		</Unit>
-		<Unit filename="C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/src/main.c">
+		<Unit filename="C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/src/main.c">
 			<Option target="Proyecto_Matematicas_Discretas"/>
 		</Unit>
-		<Unit filename="C:/Users/rodri/OneDrive/Escritorio/Nueva_carpeta/Tarea-Semestral-Discretas/CMakeLists.txt">
+		<Unit filename="C:/Users/rodri/OneDrive/Escritorio/Discretas/Tarea-Semestral-Discretas/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
