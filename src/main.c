@@ -32,34 +32,33 @@ void seguir(int *continuar) {
     }
 }
 
-int main() {
-    int continuar = 1;
-    int opcion;
+    int main() {
+        int continuar = 1;
+        int opcion;
 
-    /*
-    printf("Ingrese la ubicación del archivo\n");
-    fgets(filename, sizeof(filename), stdin);
+        //Lectura archivo rapida
+        //lectura_archivo("../grafo");
 
-    //eliminar n
-    filename[strcspn(filename, "\n")] = 0;
+       // printf("Ingrese la ubicación del archivo\n");
+        //fgets(filename, sizeof(filename), stdin);
 
-    lectura_archivo(filename);
-    */
+        //filename[strcspn(filename, "\n")] = 0;
 
-    // Primera lectura de archivo
-    lectura_archivo("../grafo");
+        if (!lectura_archivo("../gafro")) {
+            printf("No se pudo cargar el archivo.\n");
+            liberar_matriz();
+            return 1;
+        }
 
-    imprimir_matriz();
-    // Verificar simetría para asegurarnos que sea un grafo
-    if (revisarsimetria()) {
-        printf("Grafo confirmado!\n");
-    } else {
-        printf("Lo ingresado no es un grafo!\n");
-        continuar = 0;
-    }
+        if (revisarsimetria()) {
+            printf("Grafo confirmado!\n");
+        } else {
+            printf("Lo ingresado no es un grafo no dirigido\n");
+            liberar_matriz();
+            return 1;
+        }
 
-    imprimir_matriz();
-    while (continuar) {
+        while (continuar) {
         printf("Ingresa una operación:\n");
         printf("1. Revisar grados\n");
         printf("2. Revisar conexidad (Matriz)\n");
@@ -148,15 +147,14 @@ int main() {
             }
             case 6:
                 printf("Ingrese la ubicación del archivo\n");
-                getchar();  // Limpia el buffer de entrada antes de fgets
+                getchar();
                 fgets(filename, sizeof(filename), stdin);
                 filename[strcspn(filename, "\n")] = '\0';
-                liberar_matriz(); // Liberar matriz antes de cargar un nuevo archivo
+                liberar_matriz();
 
                 lectura_archivo(filename);
 
                 imprimir_matriz();
-                // Verificar simetría para asegurarnos que sea un grafo
                 if (revisarsimetria()) {
                     printf("Grafo confirmado!\n");
                 } else {
@@ -175,6 +173,4 @@ int main() {
                 printf("Opción inválida.\n");
         }
     }
-
-    return 0;
-}
+    }

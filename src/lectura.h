@@ -6,7 +6,7 @@ extern int **matriz_transpuesta;
 extern int **matriz_temporal;
 
 // Declaración de la función que implementará la lógica para leer el archivo
-void lectura_archivo();
+int lectura_archivo();
 void inicializar_matriz();
 void imprimir_matriz();
 void liberar_matriz();

@@ -25,20 +25,20 @@ void inicializarmatriz() {
     }
 }
 
-void lectura_archivo(const char *file) {
+int lectura_archivo(const char *file) {
     FILE *f = fopen(file, "r");
 
     // Caso error
     if (f == NULL) {
         perror("Error al abrir archivo");
-        return;
+        return 0;
     }
 
     //Cantidad de vertices
     if (fscanf(f, "%d", &vertices) != 1 || vertices <= 0) {
         printf("Error: número de vértices inválido.\n");
         fclose(f);
-        return;
+        return 0;
     }
 
     inicializarmatriz();
@@ -75,6 +75,7 @@ void lectura_archivo(const char *file) {
         }
     }
     fclose(f);
+    return 1;
 }
 
 void imprimir_matriz() {
@@ -91,9 +92,11 @@ void liberar_matriz() {
     for (int i = 0; i < vertices; i++) {
         free(matriz_adyacente[i]);
         free(matriz_transpuesta[i]);
+        free(matriz_temporal[i]);
     }
     free(matriz_adyacente);
     free(matriz_transpuesta);
+    free(matriz_temporal);
 }
 
 void transponermatriz() {
@@ -116,5 +119,4 @@ int revisarsimetria() {
             }
         }
     }
-    return 1;
 }
