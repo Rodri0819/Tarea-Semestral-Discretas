@@ -107,7 +107,7 @@ int main() {
 
                 printf("\n");
                 printf("--------------------------------------\n");
-                if (dfsconexo(matriz_adyacente)) {
+                if (verificarConectividad(matriz_adyacente)) {
                     printf("El grafo es conexo.\n");
                 } else {
                     printf("El grafo es disconexo.\n");

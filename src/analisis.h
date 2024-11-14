@@ -5,6 +5,8 @@
 #ifndef ANALISIS_H
 #define ANALISIS_H
 
+#include <stdbool.h>
+
 extern int vertices;
 extern int **matriz_adyacente;
 extern int **matriz_temporal;
@@ -15,7 +17,7 @@ int gradoMax();
 int gradoMin();
 int *aislados(int *contador);
 int conexidad(int **matriz_adyacente);
-int dfsconexo();
+int verificarConectividad();
 int kConectividad();
 
 

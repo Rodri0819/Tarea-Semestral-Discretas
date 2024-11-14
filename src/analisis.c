@@ -147,7 +147,7 @@ void dfs(int s) {
     }
 }
 
-int dfsconexo() {
+int verificarConectividad() {
     inicializarVisitados();
     dfs(0);
 
@@ -199,13 +199,13 @@ bool esConexoReducido(bool *omitidos, bool *visitados) {
     return true;
 }
 
-bool probarCombinaciones(int k, int start, int depth, bool *omitidos, bool *visitados) {
-    if (depth == k) {
+bool probarCombinaciones(int k, int nodoInicial, int contadorEliminados, bool *omitidos, bool *visitados) {
+    if (contadorEliminados == k) {
         return esConexoReducido(omitidos, visitados);
     }
-    for (int i = start; i < vertices; i++) {
+    for (int i = nodoInicial; i < vertices; i++) {
         omitidos[i] = true;
-        if (!probarCombinaciones(k, i + 1, depth + 1, omitidos, visitados)) {
+        if (!probarCombinaciones(k, i + 1, contadorEliminados + 1, omitidos, visitados)) {
             omitidos[i] = false;
             return false;
         }
@@ -218,7 +218,7 @@ int kConectividad() {
     bool *visitados = (bool*)malloc(vertices * sizeof(bool));
     bool *omitidos = (bool*)calloc(vertices, sizeof(bool));
 
-    for (int k = 1; k < vertices; k++) {
+    for (int k = 1; k < vertices-1; k++) {
         if (!probarCombinaciones(k, 0, 0, omitidos, visitados)) {
             free(visitados);
             free(omitidos);
