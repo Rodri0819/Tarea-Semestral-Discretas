@@ -37,14 +37,13 @@ void seguir(int *continuar) {
         int opcion;
 
         //Lectura archivo rapida
-        //lectura_archivo("../grafo");
+        //lectura_archivo("../gafro");
 
-       // printf("Ingrese la ubicación del archivo\n");
-        //fgets(filename, sizeof(filename), stdin);
+        printf("Ingrese la ubicación del archivo\n");
+        fgets(filename, sizeof(filename), stdin);
+        filename[strcspn(filename, "\n")] = 0;
 
-        //filename[strcspn(filename, "\n")] = 0;
-
-        if (!lectura_archivo("../gafro")) {
+        if (!lectura_archivo(filename)) {
             printf("No se pudo cargar el archivo.\n");
             liberar_matriz();
             return 1;
@@ -173,4 +172,4 @@ void seguir(int *continuar) {
                 printf("Opción inválida.\n");
         }
     }
-    }
+}
