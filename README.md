@@ -16,9 +16,10 @@ o en su defecto descargarlo.
 En caso de que no sirva el make run:
 
 Ejecutar por la terminal `gcc -o main src/main.c src/lectura.c src/analisis.c` en ...\Tarea-Semestral-Discretas\
-despues de compilarlo, ejecutar `main.exe` (Windows), o `./main` (Linux)
 
-## 3. Uso
+Despues de compilarlo, ejecutar `main.exe` (Windows), o `./main` (Linux)
+
+## Uso
 Para usar el programa ya compilado, asegúrese de tener un archivo en el formato adecuado (sin extensión). Cuando se pida la ubicación del archivo, ingrese la ruta completa, como en el siguiente ejemplo:
 
 `...\Tarea-Semestral-Discretas\grafos`
