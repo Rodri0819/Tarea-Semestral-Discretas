@@ -1,9 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>  // Para malloc y free
-#include "analisis.h"
-
+#include <stdlib.h>
 #include <stdbool.h>
-
+#include "analisis.h"
 #include "lectura.h"
 
 int gradoMin() {
@@ -70,7 +68,6 @@ void multiplicarMatrices(int** resultado, int** A, int** B) {
     }
 }
 
-//Suma las matrices
 void sumarMatrices(int** resultado, int** A) {
     for (int i = 0; i < vertices; ++i) {
         for (int j = 0; j < vertices; ++j) {
@@ -162,9 +159,6 @@ int verificarConectividad() {
     return 1;
 }
 
-
-
-
 void dfsReducido(int nodo, bool *omitidos, bool *visitados) {
     visitados[nodo] = true;
     for (int i = 0; i < vertices; i++) {
@@ -214,17 +208,19 @@ bool probarCombinaciones(int k, int nodoInicial, int contadorEliminados, bool *o
     return true;
 }
 
+
 int kConectividad() {
     bool *visitados = (bool*)malloc(vertices * sizeof(bool));
     bool *omitidos = (bool*)calloc(vertices, sizeof(bool));
 
-    for (int k = 1; k < vertices-1; k++) {
+    for (int k = 1; k < vertices - 1; k++) {
         if (!probarCombinaciones(k, 0, 0, omitidos, visitados)) {
             free(visitados);
             free(omitidos);
             return k;
         }
     }
+    
     free(visitados);
     free(omitidos);
     return vertices - 1;

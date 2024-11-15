@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
-
+#include <time.h>
 #include "lectura.h"
 #include "analisis.h"
 
@@ -35,10 +35,7 @@ void seguir(int *continuar) {
     int main() {
         int continuar = 1;
         int opcion;
-
-        //Lectura archivo rapida
-        //lectura_archivo("../gafro");
-
+        
         printf("Ingrese la ubicación del archivo\n");
         fgets(filename, sizeof(filename), stdin);
         filename[strcspn(filename, "\n")] = 0;
@@ -66,7 +63,6 @@ void seguir(int *continuar) {
         printf("5. Revisar si posee vértices aislados\n");
         printf("6. Introducir otro archivo(grafo)\n");
         printf("7. Salir\n");
-
         printf("Seleccione una opción: ");
         scanf("%d", &opcion);
 
@@ -81,6 +77,7 @@ void seguir(int *continuar) {
                 seguir(&continuar);
                 break;
             }
+            
             case 2: {
                 printf("--------------------------------------\n");
                 if (conexidad(matriz_adyacente)) {
@@ -93,6 +90,7 @@ void seguir(int *continuar) {
                 seguir(&continuar);
                 break;
             }
+            
             case 3: {
                 printf("--------------------------------------\n");
                 for (int i = 0; i < vertices; i++) {
@@ -102,7 +100,6 @@ void seguir(int *continuar) {
                     }
                 }
                 printf("--------------------------------------\n");
-
                 printf("\n");
                 printf("--------------------------------------\n");
                 if (verificarConectividad(matriz_adyacente)) {
@@ -115,14 +112,16 @@ void seguir(int *continuar) {
                 seguir(&continuar);
                 break;
             }
-            case 4: {
 
+            case 4: {
+                printf("--------------------------------------\n");
                 int k = kConectividad();
                 printf("La k-conectividad del grafo es: %d\n", k);
-
+                printf("--------------------------------------\n");
                 seguir(&continuar);
                 break;
             }
+
             case 5: {
                 int contador;
                 int *filasconceros = aislados(&contador);
@@ -145,7 +144,9 @@ void seguir(int *continuar) {
                 break;
             }
             case 6:
-                printf("Ingrese la ubicación del archivo\n");
+            
+                printf("Ingrese la ubicación del archivo: \n");
+            
                 getchar();
                 fgets(filename, sizeof(filename), stdin);
                 filename[strcspn(filename, "\n")] = '\0';
@@ -154,6 +155,7 @@ void seguir(int *continuar) {
                 lectura_archivo(filename);
 
                 imprimir_matriz();
+            
                 if (revisarsimetria()) {
                     printf("Grafo confirmado!\n");
                 } else {
@@ -164,10 +166,12 @@ void seguir(int *continuar) {
                     seguir(&continuar);
                 }
                 break;
+
             case 7:
                 continuar = 0;
                 liberar_matriz();
                 break;
+            
             default:
                 printf("Opción inválida.\n");
         }
