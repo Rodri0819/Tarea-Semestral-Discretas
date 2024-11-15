@@ -11,7 +11,7 @@ git clone https://github.com/Rodri0819/Tarea-Semestral-Discretas/`
 ```
 o en su defecto descargarlo.
 
-2.- Ejecutar en la ubicación del proyecto por via terminal escribiendo `make run` en ...\Tarea-Semestral-Discretas\
+2.- Ejecutar en la ubicación del proyecto por via terminal escribiendo `make run` en ...\Tarea-Semestral-Discretas\ (Windows)
 
 En caso de que no sirva el make run:
 
